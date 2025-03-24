@@ -16,7 +16,7 @@ router.post(
 
 // Task create, update, delete .......................
 router.post("/createTask", AuthoVerifyMiddleware, TasksController.createTask);
-router.get("/readTasks", AuthoVerifyMiddleware, TasksController.readTasks);
+router.get("/readTasks", TasksController.readTasks);
 router.get(
   "/updateTask/:id/:status",
   AuthoVerifyMiddleware,
